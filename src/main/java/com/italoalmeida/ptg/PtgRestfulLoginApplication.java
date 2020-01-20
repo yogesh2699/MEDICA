@@ -8,6 +8,7 @@ public class PtgRestfulLoginApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PtgRestfulLoginApplication.class, args);
+
 	}
 
 }

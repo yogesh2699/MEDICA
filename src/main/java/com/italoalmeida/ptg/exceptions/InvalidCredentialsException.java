@@ -2,10 +2,7 @@ package com.italoalmeida.ptg.exceptions;
 
 import org.springframework.http.HttpStatus;
 
-/**
- * @author Italo Almeida
- *
- */
+
 public class InvalidCredentialsException extends Exception {
 
 	private static final long serialVersionUID = -2850603748351432613L;

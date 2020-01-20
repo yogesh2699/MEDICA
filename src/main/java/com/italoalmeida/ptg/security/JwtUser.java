@@ -13,31 +13,25 @@ public class JwtUser implements Serializable {
 	private static final long serialVersionUID = -874071359709399690L;
 	
 	private String firstName;
-	
-	private String lastName;
-	
+
 	private String email;
 	
-	private Long phones;
+	private String phones;
 	
-	private Date created_at;
-	
-	private Date last_login;
+
 
 	private String gender;
 
-	private Integer age;
+	private String age;
 	
 	public JwtUser() {
 	}
 
 	public JwtUser(User user) {
 		this.firstName = user.getFirstName();
-		this.lastName = user.getLastName();
 		this.email = user.getEmail();
 		this.phones = user.getPhones();
-		this.created_at = user.getCreated_at();
-		this.last_login = user.getLast_login();
+
 		this.age = user.getAge();
 		this.gender = user.getGender();
 	}
@@ -50,11 +44,11 @@ public class JwtUser implements Serializable {
 		this.gender = gender;
 	}
 
-	public Integer getAge() {
+	public String getAge() {
 		return age;
 	}
 
-	public void setAge(Integer age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 
@@ -66,14 +60,6 @@ public class JwtUser implements Serializable {
 		this.firstName = firstName;
 	}
 
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
 	public String getEmail() {
 		return email;
 	}
@@ -82,28 +68,13 @@ public class JwtUser implements Serializable {
 		this.email = email;
 	}
 
-	public Long getPhones() {
+	public String getPhones() {
 		return phones;
 	}
 
-	public void setPhones(Long phones) {
+	public void setPhones(String phones) {
 		this.phones = phones;
 	}
 
-	public Date getCreated_at() {
-		return created_at;
-	}
 
-	public void setCreated_at(Date created_at) {
-		this.created_at = created_at;
-	}
-
-	public Date getLast_login() {
-		return last_login;
-	}
-
-	public void setLast_login(Date last_login) {
-		this.last_login = last_login;
-	}
-	
 }

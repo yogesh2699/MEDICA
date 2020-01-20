@@ -38,7 +38,7 @@ public class JwtTokenUtil implements Serializable {
 		Date issuedDate = clock.now();
 		Date expirationDate = defineExpirationDateFrom(issuedDate);
 		
-		jwtUser.setLast_login(issuedDate);
+
 		
 		String stringfiedJwtUser = stringfyJwtUser(jwtUser);
 

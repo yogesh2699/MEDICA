@@ -14,22 +14,22 @@ public class Credentials implements Serializable {
 	@NotNull
 	@NotBlank
 	@Email
-	private Long phones;
+	private String phones;
 	
 	@NotNull
 	@NotBlank
 	private String password;
 
-	public Credentials(Long phones, String password) {
+	public Credentials(String phones, String password) {
 		this.phones = phones;
 		this.password = password;
 	}
 
-	public Long getPhones() {
+	public String getPhones() {
 		return phones;
 	}
 
-	public void setPhones(Long phones) {
+	public void setPhones(String phones) {
 		this.phones = phones;
 	}
 

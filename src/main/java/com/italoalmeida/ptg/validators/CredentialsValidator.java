@@ -11,10 +11,7 @@ import com.italoalmeida.ptg.security.Credentials;
 
 import static com.italoalmeida.ptg.validators.ValidatorUtil.*;
 
-/**
- * @author Italo Almeida
- *
- */
+
 @Component
 public class CredentialsValidator implements Validator<Credentials> {
 	

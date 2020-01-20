@@ -17,7 +17,7 @@ public class ValidatorUtil {
 		return (integer != null && integer > 0);
 	}
 	
-	public static boolean isValidList(Long list) {
+	public static boolean isValidList(String list) {
 		return (list != null);
 	}
 	

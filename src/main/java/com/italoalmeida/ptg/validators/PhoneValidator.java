@@ -9,21 +9,18 @@ import com.italoalmeida.ptg.exceptions.InvalidFieldsException;
 import com.italoalmeida.ptg.exceptions.MissingFieldsException;
 import com.italoalmeida.ptg.models.Phone;
 
-/**
- * @author Italo Almeida
- *
- */
+
 @Component
 public class PhoneValidator implements Validator<Phone> {
 	
 	@Override
 	public void validateRequiredFields(Phone model) throws Exception {
 		
-		if (model.getNumber() == null) throw new MissingFieldsException();
+		//if (model.getNumber() == null) throw new MissingFieldsException();
 		
-		if (model.getArea_code() == null) throw new MissingFieldsException();
+		//if (model.getArea_code() == null) throw new MissingFieldsException();
 		
-		if (model.getCountry_code() == null) throw new MissingFieldsException();
+		//if (model.getCountry_code() == null) throw new MissingFieldsException();
 	}
 
 	@Override
@@ -33,7 +30,7 @@ public class PhoneValidator implements Validator<Phone> {
 		
 		//if (!isValidPositiveInteger(model.getArea_code())) throw new InvalidFieldsException();
 		
-		if (!isVaildString(model.getCountry_code())) throw new InvalidFieldsException();
+		//if (!isVaildString(model.getCountry_code())) throw new InvalidFieldsException();
 	}
 
 	@Override

@@ -12,10 +12,7 @@ import com.italoalmeida.ptg.repositories.UserRepository;
 
 import static com.italoalmeida.ptg.validators.ValidatorUtil.*;
 
-/**
- * @author Italo Almeida
- *
- */
+
 @Component
 public class UserValidator implements Validator<User> {
 	
@@ -30,9 +27,9 @@ public class UserValidator implements Validator<User> {
 		
 		if (model.getFirstName() == null) throw new MissingFieldsException();
 		
-		if (model.getLastName() == null) throw new MissingFieldsException();
+
 		
-		if (model.getEmail() == null) throw new MissingFieldsException();
+
 		
 		if (model.getPassword() == null) throw new MissingFieldsException();		
 
@@ -49,9 +46,9 @@ public class UserValidator implements Validator<User> {
 		
 		if (!isVaildString(model.getFirstName())) throw new InvalidFieldsException();
 		
-		if (!isVaildString(model.getLastName())) throw new InvalidFieldsException();
+
 		
-		if (!isValidEmail(model.getEmail())) throw new InvalidFieldsException();
+
 		
 		if (!isVaildString(model.getPassword())) throw new InvalidFieldsException();
 
@@ -59,7 +56,7 @@ public class UserValidator implements Validator<User> {
 
 		if(!isVaildString(model.getGender())) throw new InvalidFieldsException();
 
-		if(!isValidPositiveInteger(model.getAge())) throw new InvalidFieldsException();
+		//if(!isValidPositiveInteger(model.getAge())) throw new InvalidFieldsException();
 
 	}
 	

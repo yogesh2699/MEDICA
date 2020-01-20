@@ -1,21 +1,14 @@
 package com.italoalmeida.ptg.models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CreationTimestamp;
 
 
@@ -25,50 +18,70 @@ public class User implements Serializable {
 
 	private static final long serialVersionUID = 3004049128350546151L;
 	
-	@Id
+
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
-	@NotNull
+
 	private String firstName;
-	
-	@NotNull
-	private String lastName;
-	
-	@NotNull
+
 	private String email;
-	
+
+	private String city;
+
+	private String state;
 	@NotNull
 	private String password;
-	
-	@NotNull
-	@Column(unique = true)
-	private Long phones;
-	
-	@CreationTimestamp
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date created_at;
-	
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(updatable = true)
-	private Date last_login;
 
+	@Id
 	@NotNull
-	private Integer age;
+	@Column(name = "phones",unique = true)
+	private String phones;
+	
 
-	@NotNull
+	
+
+
+
+	private String age;
+
+
 	private String gender;
+
+	private String aadhaar;
+
+	private String bloodgroup;
+
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
 
 	public User() {
 		super();
 	}
 
-	public User(@NotNull String firstName, @NotNull String lastName,
-			@NotNull String email, @NotNull String password,
-			@NotNull Long phones,@NotNull Integer age,@NotNull String gender) {
+	public User(String aadhaar, String bloodgroup) {
+		this.aadhaar = aadhaar;
+		this.bloodgroup = bloodgroup;
+	}
+
+	public User( String firstName,
+				 String email,  String password,
+				 String phones,  String age,  String gender) {
 		super();
 		this.firstName = firstName;
-		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
 		this.phones = phones;
@@ -80,11 +93,11 @@ public class User implements Serializable {
 		return id;
 	}
 
-	public Integer getAge() {
+	public String getAge() {
 		return age;
 	}
 
-	public void setAge(Integer age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 
@@ -108,14 +121,6 @@ public class User implements Serializable {
 		this.firstName = firstName;
 	}
 
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
 	public String getEmail() {
 		return email;
 	}
@@ -132,28 +137,29 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
-	public Long getPhones() {
+	public String getPhones() {
 		return phones;
 	}
 
-	public void setPhones(Long phones) {
+	public void setPhones(String phones) {
 		this.phones = phones;
 	}
 
-	public Date getCreated_at() {
-		return created_at;
+
+
+	public String getAadhaar() {
+		return aadhaar;
 	}
 
-	public void setCreated_at(Date created_at) {
-		this.created_at = created_at;
+	public void setAadhaar(String aadhaar) {
+		this.aadhaar = aadhaar;
 	}
 
-	public Date getLast_login() {
-		return last_login;
+	public String getBloodgroup() {
+		return bloodgroup;
 	}
 
-	public void setLast_login(Date last_login) {
-		this.last_login = last_login;
+	public void setBloodgroup(String bloodgroup) {
+		this.bloodgroup = bloodgroup;
 	}
-	
 }

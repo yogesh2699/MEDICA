@@ -9,10 +9,7 @@ import com.italoalmeida.ptg.exceptions.InvalidFieldsException;
 import com.italoalmeida.ptg.exceptions.UnauthorizedException;
 import com.italoalmeida.ptg.security.JwtTokenUtil;
 
-/**
- * @author Italo Almeida
- *
- */
+
 @Component
 public class TokenValidator implements Validator<String> {
 	

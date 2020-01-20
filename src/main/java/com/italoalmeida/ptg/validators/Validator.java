@@ -5,7 +5,6 @@ import org.springframework.ui.Model;
 import javax.jws.WebParam;
 
 /**
- * @author Italo Almeida
  *
  * @param <MODEL>
  */
