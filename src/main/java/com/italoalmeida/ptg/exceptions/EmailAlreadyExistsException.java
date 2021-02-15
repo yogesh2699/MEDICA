@@ -6,7 +6,8 @@ import org.springframework.http.HttpStatus;
  * @author Italo Almeida
  *
  */
-public class EmailAlreadyExistsException extends Exception {
+public class
+EmailAlreadyExistsException extends Exception {
 
 	private static final long serialVersionUID = -7324811351491882884L;
 	
